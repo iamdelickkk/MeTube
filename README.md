@@ -5,3 +5,5 @@
 Зайди в /extra/db/config.php и введи данные о бд<br />
 А в /extra/init.php и в $link введи url сайта (к примеру http://example.com)<br />
 Рекомендуется Linux и ffmpeg!
+# бд
+Импортируй 1_database.sql в свою бд
