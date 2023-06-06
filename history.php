@@ -1,0 +1,1 @@
+<?php header("Location: /my_videos_history") ?>

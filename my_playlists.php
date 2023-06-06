@@ -1,0 +1,1 @@
+<?php header("Location: /view_all_playlists"); ?>
