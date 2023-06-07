@@ -237,7 +237,7 @@ class GlobalClass{
 	}
 
 	public function getMention($text){
-        $text = preg_replace("/@([\w]+)/", "<a href='https://metubee.xyz/$0'>$0</a>", $text);
+        $text = preg_replace("/@([\w]+)/", "<a href='/$0'>$0</a>", $text);
         return $text;		
     }
 

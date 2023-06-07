@@ -2,7 +2,7 @@
 include 'db/connection.php';
 include 'classes/global.php';
 $global = new GlobalClass($mysql);
-$link = 'https://metubee.xyz/'; //URL сайта, обязательно с http:// или https:// и с / в конце!
+$link = 'http://localhost/'; //URL сайта, обязательно с http:// или https:// и с / в конце!
 ini_set('display_errors', '0');
 ini_set('display_startup_errors', '0');
 error_reporting(0);

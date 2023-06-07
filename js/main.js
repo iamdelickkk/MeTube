@@ -62,7 +62,7 @@ $(document).ready(function(){
     })
     $(document).on('click', '#deletecomu', function(){
         $('#comu' + $(this).data('comu')).fadeOut(450);
-        $.post('https://metubee.xyz/extra/user/ajax/deletecomu.php', {comuid:$(this).data('comu')}, function(){})
+        $.post('/extra/user/ajax/deletecomu.php', {comuid:$(this).data('comu')}, function(){})
     })
     $(document).on('click', '#add_link_channel', function(){
         $('#popups').html('<div class="popup"><div class="popup-container"><div class="popup-header">Добавить ссылку<div class="close_popup">✕</div></div><div class="popup-content"><form method="POST"><span>Название</span><br><input maxlength="24" type="text" name="title" class="input"><span>URL</span><br><input type="text" name="url" class="input"><div class="mt-display-flex"><input type="submit" name="add_link" class="mt-uix-button mt-button-primary mt-margin-left" value="Добавить"></div></form></div></div></div>');
@@ -84,7 +84,7 @@ $(document).ready(function(){
             if(counter != 0){
                 counter--;
                 $('.watch-page-subs-counter').html(counter);
-                $.post('https://metubee.xyz/extra/user/ajax/subscribe.php', {unsubscribe: $(this).data('user')}, function(data){
+                $.post('/extra/user/ajax/subscribe.php', {unsubscribe: $(this).data('user')}, function(data){
                     if(data == '"error"'){
                         $('body').html('');
                         location.href = '/login';
@@ -174,7 +174,7 @@ $(document).ready(function(){
             counter = $('.watch-page-subs-counter').text();
             counter++;
             $('.watch-page-subs-counter').html(counter);
-            $.post('https://metubee.xyz/extra/user/ajax/subscribe.php', {subscribe: $(this).data('user')}, function(data){
+            $.post('/extra/user/ajax/subscribe.php', {subscribe: $(this).data('user')}, function(data){
                 if(data == '"error"'){
                     $(this).removeClass('global--subscribed');
                     $(this).addClass('global--subscribe');
@@ -298,7 +298,7 @@ $(document).ready(function(){
         }
         $(this).hide(0);
         $(this).fadeIn(500);
-        $.post('https://metubee.xyz/extra/video/wh.php', {video:$(this).data('vid')}, function(data){
+        $.post('/extra/video/wh.php', {video:$(this).data('vid')}, function(data){
             if(data == '"error"'){
                 if($(this).hasClass('add-to-button-video-success')){
                     $(this).removeClass('add-to-button-video-success');

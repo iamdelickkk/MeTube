@@ -556,13 +556,13 @@ if(isset($_GET['flag']) && $_GET['flag'] == 'true'){
                             </div>
                         </div>
                         <div id="panel-share" class="panel hidden">
-                            <input type="text" class="input" value="https://metubee.xyz/watch?v=<?php echo $video['videoGetID']; ?>" readonly><br><br>
+                            <input type="text" class="input" value="<?php echo $link ?>watch?v=<?php echo $video['videoGetID']; ?>" readonly><br><br>
                             <div>
-                                <a href="https://plus.moogle.sbs/?act=share&share=https://metubee.xyz/watch?v=<?php echo $video['videoGetID']; ?>">
+                                <a href="https://plus.moogle.sbs/?act=share&share=<?php echo $link ?>watch?v=<?php echo $video['videoGetID']; ?>">
                                     <img src="img/socials/moogleplus.png">
                                 </a>
 
-                                <a href="https://z.moogle.sbs/share?value=https://metubee.xyz/watch?v=<?php echo $video['videoGetID']; ?>">
+                                <a href="https://z.moogle.sbs/share?value=<?php echo $link ?>watch?v=<?php echo $video['videoGetID']; ?>">
                                     <img src="img/socials/zohan.png">
                                 </a>
                             </div>
