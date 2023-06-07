@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+RewriteRule ^user/([a-zA-Z0-9_-]+)/?$ channel.php?v=$1
+RewriteRule ^user/([a-zA-Z0-9_-]+)/videos?$ channel_videos.php?v=$1 [QSA,L]
+RewriteRule ^user/([a-zA-Z0-9_-]+)/community?$ channel_community.php?v=$1 [QSA,L]
+RewriteRule ^user/([a-zA-Z0-9_-]+)/about?$ channel_about.php?v=$1 [QSA,L]
+RewriteRule ^@([a-zA-Z0-9_-]+)/?$ channel.php?v=$1
